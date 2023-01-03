@@ -1,0 +1,48 @@
+{
+  "name": "cure-tmk.github.io",
+  "version": "1.0.0",
+  "license": "ISC",
+  "author": "@cure-tmk",
+  "scripts": {
+    "build": "astro build",
+    "dev": "astro dev",
+    "test": "vitest",
+    "check": "run-s check:*",
+    "check:astro": "astro check",
+    "check:typecheck": "tsc -p .",
+    "format": "run-s 'format:*'",
+    "format:prettier": "prettier --config prettier.config.js --write '**/*.+(ts|tsx|js|md|json|astro)'",
+    "format:script": "eslint --fix --ext .js,.ts,.tsx,.astro .",
+    "lint": "run-s 'lint:*'",
+    "lint:script": "eslint --ext .js,.ts,.astro .",
+    "preview": "astro preview",
+    "start": "astro dev"
+  },
+  "dependencies": {
+    "@astrojs/image": "0.13.0",
+    "@astrojs/tailwind": "3.0.0",
+    "astro": "2.0.1",
+    "tailwindcss": "3.2.4"
+  },
+  "devDependencies": {
+    "@types/jest": "29.4.0",
+    "@typescript-eslint/eslint-plugin": "5.49.0",
+    "@typescript-eslint/parser": "5.49.0",
+    "eslint": "8.32.0",
+    "eslint-config-import": "0.13.0",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-plugin-astro": "0.23.0",
+    "eslint-plugin-import": "2.27.5",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.8.3",
+    "prettier-plugin-astro": "0.8.0",
+    "prettier-plugin-packagejson": "2.4.0",
+    "prettier-plugin-tailwindcss": "0.2.2",
+    "typescript": "4.9.4",
+    "vitest": "0.28.2"
+  },
+  "packageManager": "pnpm@7.9.4",
+  "engines": {
+    "node": "18.13.0"
+  }
+}

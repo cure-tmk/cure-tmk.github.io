@@ -1,0 +1,13 @@
+{
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "incremental": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "strict": true,
+    "jsx": "preserve"
+  },
+  "types": ["vitest/globals", "@types/jest"],
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts", "**/*.tsx", "src/utils/ArrayUtils.test.sts"]
+}

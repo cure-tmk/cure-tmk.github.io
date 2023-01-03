@@ -1,0 +1,27 @@
+---
+import { compact } from '../../../utils/ArrayUtils';
+import { Container } from '../../layouts/Container';
+
+export interface Props {
+  title?: string;
+}
+
+const title = compact(['cure-tmk', Astro.props.title]).join(' | ');
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <aside class="mb-4 flex justify-center bg-slate-100 p-4 pb-2 pt-2">
+      🔨 This page is currently under development! Sorry for the inconvenience!
+    </aside>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+---
+export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
+  href: string;
+}
+
+const { target, rel, ...rest } = Astro.props;
+---
+
+<a target={target} rel={target === '_blank' && rel == null ? 'noopener noreferrer' : rel} {...rest}><slot /></a>
