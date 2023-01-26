@@ -1,0 +1,10 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+export type Props = HTMLAttributes<'div'>;
+
+const { ...props } = Astro.props;
+---
+
+<!-- TODO -->
+<div {...props} class:list={[props.class, props['class:list?']]}></div>

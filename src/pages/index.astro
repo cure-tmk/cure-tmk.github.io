@@ -1,24 +1,26 @@
 ---
 import { Container } from '../components/layouts/Container';
+import Spacing from '../components/layouts/Spacing/Spacing.astro';
 import { Link } from '../components/navitation/Link';
 import { Common as Template } from '../components/templates/Common';
+import { Text } from '../components/typography/Text';
 ---
 
 <Template title="hi">
   <Container>
-    <h1 class="text-2xl">cure-tmk</h1>
+    <Text as="h1" class="text-2xl">cure-tmk</Text>
 
-    <div class="mb-4"></div>
+    <Spacing class="mb-4" />
 
-    <h2 class="text-xl">About</h2>
-    <p>
+    <Text as="h2" class="text-xl">About</Text>
+    <Text as="p">
       Hi, my name is Tomoki. Welcome to my corner of the Internet. I&apos;m a frontend web engineer based in Tokyo. I
       focus on creating elegant, performant, and accessible digital experiences for both users and developers.
-    </p>
+    </Text>
 
-    <div class="mb-4"></div>
+    <Spacing class="mb-4" />
 
-    <h2 class="text-xl">Resume</h2>
+    <Text as="h2" class="text-xl">Resume</Text>
     <ol>
       <li>
         Full-time Web Developer at CyberAgent Inc. since 2019. Worked on:
@@ -42,7 +44,7 @@ import { Common as Template } from '../components/templates/Common';
 
     <div class="mb-2"></div>
 
-    <h3 class="text-lg">Experienced in:</h3>
+    <Text as="h3" class="text-lg">Experienced in:</Text>
     <ul>
       <li>HTML</li>
       <li>CSS</li>
@@ -53,9 +55,9 @@ import { Common as Template } from '../components/templates/Common';
       <li>and more</li>
     </ul>
 
-    <div class="mb-4"></div>
+    <Spacing class="mb-4" />
 
-    <h2 class="text-xl">Contacts</h2>
+    <Text as="h2" class="text-xl">Contacts</Text>
     <p>
       I am always open to discussing new projects, ideas or opportunities to be a part of your vision. Please contact me
       via email or Twitter DM.

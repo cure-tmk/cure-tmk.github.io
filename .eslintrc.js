@@ -18,10 +18,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
+  globals: {},
   rules: {
     'import/named': 'off',
     'import/namespace': 'off',
@@ -47,28 +44,6 @@ module.exports = {
       },
       rules: {
         'no-undef': 'off',
-      },
-    },
-    {
-      files: ['*.ts', '*.tsx'],
-      extends: ['plugin:@typescript-eslint/recommended', 'plugin:import/typescript'],
-      plugins: ['@typescript-eslint'],
-      parser: '@typescript-eslint/parser',
-      rules: {
-        '@typescript-eslint/no-unused-vars': 'off',
-        '@typescript-eslint/no-explicit-any': 'off',
-        '@typescript-eslint/explicit-function-return-type': 'off',
-        '@typescript-eslint/explicit-module-boundary-types': 'off',
-      },
-    },
-    {
-      files: ['*.test.ts', '*.test.tsx'],
-      rules: {
-        'no-empty': 'off',
-        'no-console': 'off',
-        'no-undef': 'off',
-        '@typescript-eslint/no-empty-function': 'off',
-        '@typescript-eslint/no-non-null-assertion': 'off',
       },
     },
   ],
