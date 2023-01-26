@@ -16,7 +16,8 @@
     "lint": "run-s 'lint:*'",
     "lint:script": "eslint --ext .js,.ts,.astro .",
     "preview": "astro preview",
-    "start": "astro dev"
+    "start": "astro dev",
+    "scaffold": "scaffdog generate -f"
   },
   "dependencies": {
     "@astrojs/image": "0.13.0",
@@ -37,7 +38,9 @@
     "prettier": "2.8.3",
     "prettier-plugin-astro": "0.8.0",
     "prettier-plugin-packagejson": "2.4.0",
+    "prettier-plugin-scaffdog": "2.4.0",
     "prettier-plugin-tailwindcss": "0.2.2",
+    "scaffdog": "2.4.0",
     "typescript": "4.9.4",
     "vitest": "0.28.2"
   },
