@@ -1,10 +1,11 @@
 module.exports = {
   extends: [
     'eslint:recommended',
-    'prettier',
+    'plugin:@typescript-eslint/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:astro/recommended',
+    'prettier',
   ],
   parserOptions: {
     ecmaFeatures: {

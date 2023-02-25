@@ -4,7 +4,9 @@ import image from '@astrojs/image';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://cure-tmk.github.io',
   base: '/',
   integrations: [tailwind(), image()],
+  vite: {
+    envDir: './src/config/env',
+  },
 });
