@@ -4,16 +4,12 @@ import { Head, Props as HeadProps } from '../../functional/Head';
 export type Props = HeadProps;
 ---
 
-<html lang="en">
+<html lang="en" class="text-cure-black">
   <head>
     <Head {...Astro.props} />
   </head>
 
   <body>
-    <aside class="mb-4 flex justify-center bg-slate-100 p-4 pb-2 pt-2">
-      🔨 This page is currently under development! Sorry for the inconvenience!
-    </aside>
-
     <main>
       <slot />
     </main>

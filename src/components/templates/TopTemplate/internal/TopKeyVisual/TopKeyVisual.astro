@@ -1,0 +1,90 @@
+---
+import { asset } from '../../../../../utils/UrlUtils';
+import { FacebookIcon } from '../../../../icons/FacebookIcon';
+import { GitHubIcon } from '../../../../icons/GitHubIcon';
+import { InstagramIcon } from '../../../../icons/InstagramIcon';
+import { TwitterIcon } from '../../../../icons/TwitterIcon';
+import { Spacing } from '../../../../layouts/Spacing';
+import { Image } from '../../../../media/Image';
+import { Link } from '../../../../navitation/Link';
+import { Text } from '../../../../typography/Text';
+
+const SOCIALS = {
+  twitter: {
+    title: '@cure_tmk',
+    href: 'https://twitter.com/cure_tmk',
+  },
+  github: {
+    title: '@cure-tmk',
+    href: 'https://github.com/cure-tmk',
+  },
+  facebook: {
+    title: 'Tomoki Kano',
+    href: 'https://www.facebook.com/cure.tmk/',
+  },
+  instagram: {
+    title: '@cure_tmk',
+    href: 'https://www.instagram.com/cure_tmk/',
+  },
+} as const;
+
+type SocialType = keyof typeof SOCIALS;
+
+const SOCIAL_ORDER: SocialType[] = ['twitter', 'github', 'facebook', 'instagram'];
+const SOCIAL_ICON = {
+  twitter: TwitterIcon,
+  github: GitHubIcon,
+  facebook: FacebookIcon,
+  instagram: InstagramIcon,
+} satisfies { [x in SocialType]: any };
+---
+
+<section class="relative h-[512px] overflow-hidden">
+  <Image
+    alt=""
+    class="absolute top-[50%] left-[50%] z-[-1] max-w-none translate-y-[-50%] translate-x-[-50%] object-cover lg:min-w-full"
+    format={'jpg'}
+    src={asset('kv-bg.jpg')}
+    srcset={[`${asset('kv-bg.jpg')}`, `${asset('kv-bg@1.5x.jpg')} 1.5x`, `${asset('kv-bg@2x.jpg')} 2x`].join(', ')}
+    width={1400}
+    height={516}
+  />
+  <div class="flex h-full justify-center">
+    <div class="flex flex-col items-center justify-center lg:flex-row-reverse">
+      <Image
+        alt="cure_tmk"
+        class="h-[128px] w-[128px] rounded-full border-2 border-solid border-black duration-100 ease-in-out hover:scale-105 hover:border-transparent lg:h-[160px] lg:w-[160px]"
+        format={'jpg'}
+        src={asset('main-icon.jpg')}
+        srcset={[
+          `${asset('main-icon.jpg')}`,
+          `${asset('main-icon@1.5x.jpg')} 1.5x`,
+          `${asset('main-icon@2x.jpg')} 2x`,
+        ].join(', ')}
+        width={160}
+        height={160}
+      />
+
+      <Spacing class="mb-4 lg:mb-none lg:mr-20" />
+      <div class="text-center lg:text-left">
+        <Text as="h1" class="font-bold text-2xl lg:text-4xl">cure_tmk</Text>
+        <Spacing class="mb-1 lg:mb-2" />
+        <Text class="lg:text-xl">Tomoki Kano / 狩野智輝</Text>
+        <Spacing class="mb-4" />
+        <div class="flex justify-center gap-2 lg:justify-start">
+          {
+            SOCIAL_ORDER.map((key) => {
+              const { title, href } = SOCIALS[key];
+              const Icon = SOCIAL_ICON[key];
+              return (
+                <Link href={href} class="rounded-full duration-100 hover:opacity-80 focus:opacity-80">
+                  <Icon title={title} size="2rem" />
+                </Link>
+              );
+            })
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
