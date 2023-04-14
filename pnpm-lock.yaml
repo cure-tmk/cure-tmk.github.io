@@ -17,7 +17,7 @@ specifiers:
   prettier-plugin-astro: 0.8.0
   prettier-plugin-packagejson: 2.4.3
   prettier-plugin-scaffdog: 2.5.0
-  prettier-plugin-tailwindcss: 0.2.3
+  prettier-plugin-tailwindcss: 0.2.7
   scaffdog: 2.5.0
   tailwindcss: 3.2.7
   typescript: 4.9.5
@@ -44,7 +44,7 @@ devDependencies:
   prettier-plugin-astro: 0.8.0
   prettier-plugin-packagejson: 2.4.3_prettier@2.8.7
   prettier-plugin-scaffdog: 2.5.0
-  prettier-plugin-tailwindcss: 0.2.3_kb4gmvngxncp3puqxt3b6slppy
+  prettier-plugin-tailwindcss: 0.2.7_kb4gmvngxncp3puqxt3b6slppy
   scaffdog: 2.5.0
   typescript: 4.9.5
   vite: 4.1.4
@@ -4631,8 +4631,8 @@ packages:
       prettier: 2.8.4
     dev: true
 
-  /prettier-plugin-tailwindcss/0.2.3_kb4gmvngxncp3puqxt3b6slppy:
-    resolution: {integrity: sha512-s2N5Dh7Ao5KTV1mao5ZBnn8EKtUcDPJEkGViZIjI0Ij9TTI5zgTz4IHOxW33jOdjHKa8CSjM88scelUiC5TNRQ==}
+  /prettier-plugin-tailwindcss/0.2.7_kb4gmvngxncp3puqxt3b6slppy:
+    resolution: {integrity: sha512-jQopIOgjLpX+y8HeD56XZw7onupRTC0cw7eKKUimI7vhjkPF5/1ltW5LyqaPtSyc8HvEpvNZsvvsGFa2qpa59w==}
     engines: {node: '>=12.17.0'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
