@@ -1,6 +1,5 @@
 ---
 import { asset } from '../../../../../utils/UrlUtils';
-import { FacebookIcon } from '../../../../icons/FacebookIcon';
 import { GitHubIcon } from '../../../../icons/GitHubIcon';
 import { InstagramIcon } from '../../../../icons/InstagramIcon';
 import { TwitterIcon } from '../../../../icons/TwitterIcon';
@@ -9,34 +8,26 @@ import { Image } from '../../../../media/Image';
 import { Link } from '../../../../navitation/Link';
 import { Text } from '../../../../typography/Text';
 
-const SOCIALS = {
-  twitter: {
+const SOCIALS = [
+  {
+    label: 'twitter',
     title: '@cure_tmk',
     href: 'https://twitter.com/cure_tmk',
+    icon: TwitterIcon,
   },
-  github: {
+  {
+    label: 'github',
     title: '@cure-tmk',
     href: 'https://github.com/cure-tmk',
+    icon: GitHubIcon,
   },
-  facebook: {
-    title: 'Tomoki Kano',
-    href: 'https://www.facebook.com/cure.tmk/',
-  },
-  instagram: {
+  {
+    label: 'instagram',
     title: '@cure_tmk',
     href: 'https://www.instagram.com/cure_tmk/',
+    icon: InstagramIcon,
   },
-} as const;
-
-type SocialType = keyof typeof SOCIALS;
-
-const SOCIAL_ORDER: SocialType[] = ['twitter', 'github', 'facebook', 'instagram'];
-const SOCIAL_ICON = {
-  twitter: TwitterIcon,
-  github: GitHubIcon,
-  facebook: FacebookIcon,
-  instagram: InstagramIcon,
-} satisfies { [x in SocialType]: any };
+] as const;
 ---
 
 <section class="relative h-[512px] overflow-hidden">
@@ -73,15 +64,11 @@ const SOCIAL_ICON = {
         <Spacing class="mb-4" />
         <div class="flex justify-center gap-2 lg:justify-start">
           {
-            SOCIAL_ORDER.map((key) => {
-              const { title, href } = SOCIALS[key];
-              const Icon = SOCIAL_ICON[key];
-              return (
-                <Link href={href} class="rounded-full duration-100 hover:opacity-80 focus:opacity-80">
-                  <Icon title={title} size="2rem" />
-                </Link>
-              );
-            })
+            SOCIALS.map(({ label, title, href, icon: Icon }) => (
+              <Link title={title} href={href} class="rounded-full duration-100 hover:opacity-80 focus:opacity-80">
+                <Icon aria-label={label} size="2rem" />
+              </Link>
+            ))
           }
         </div>
       </div>
