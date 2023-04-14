@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@astrojs/image': 0.15.1
+  '@astrojs/image': 0.16.6
   '@astrojs/tailwind': 3.0.1
   '@types/jest': 29.4.0
   '@typescript-eslint/eslint-plugin': 5.53.0
@@ -25,7 +25,7 @@ specifiers:
   vitest: 0.29.1
 
 dependencies:
-  '@astrojs/image': 0.15.1_astro@2.0.15
+  '@astrojs/image': 0.16.6_astro@2.0.15
   '@astrojs/tailwind': 3.0.1_enl5tymeuxlslzmmdrwlr7zkvy
   astro: 2.0.15
   tailwindcss: 3.2.7
@@ -71,10 +71,10 @@ packages:
   /@astrojs/compiler/1.1.2:
     resolution: {integrity: sha512-L3/JrdNwBFKcoDeStmRgJWvI2t/5nNJm7HnGjDy4e8BH3qKv8iQYdpvuQjeYRA00k6I1lxZGBm/0wU+Lg7HPiQ==}
 
-  /@astrojs/image/0.15.1_astro@2.0.15:
-    resolution: {integrity: sha512-5+ZBHEfwcx8BbJbAatnW1fyFLWQW4n6jUkDRB5eLbo+yKZv8gwlpPBPpo7cqiY6kUtEisZHVsVYdCTe22KDZgQ==}
+  /@astrojs/image/0.16.6_astro@2.0.15:
+    resolution: {integrity: sha512-/MJ0aByhuNAT7VeMwXVjS0e5IH8MxsYeEnymOJ0/1VBmZFmcbtb1nUeLE0uO3EV3kNYGRJtwGyald8YJ9ncW4A==}
     peerDependencies:
-      astro: ^2.0.15
+      astro: ^2.2.2
       sharp: '>=0.31.0'
     peerDependenciesMeta:
       sharp:
