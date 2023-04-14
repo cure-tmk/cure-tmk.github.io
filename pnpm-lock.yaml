@@ -13,7 +13,7 @@ specifiers:
   eslint-plugin-astro: 0.23.0
   eslint-plugin-import: 2.27.5
   npm-run-all: 4.1.5
-  prettier: 2.8.4
+  prettier: 2.8.7
   prettier-plugin-astro: 0.8.0
   prettier-plugin-packagejson: 2.4.3
   prettier-plugin-scaffdog: 2.5.0
@@ -40,11 +40,11 @@ devDependencies:
   eslint-plugin-astro: 0.23.0_eslint@8.35.0
   eslint-plugin-import: 2.27.5_nhka4er4oejxhxq3ecgtwxvdji
   npm-run-all: 4.1.5
-  prettier: 2.8.4
+  prettier: 2.8.7
   prettier-plugin-astro: 0.8.0
-  prettier-plugin-packagejson: 2.4.3_prettier@2.8.4
+  prettier-plugin-packagejson: 2.4.3_prettier@2.8.7
   prettier-plugin-scaffdog: 2.5.0
-  prettier-plugin-tailwindcss: 0.2.3_cfgkwvtfb3vmyej4cugnuognhu
+  prettier-plugin-tailwindcss: 0.2.3_kb4gmvngxncp3puqxt3b6slppy
   scaffdog: 2.5.0
   typescript: 4.9.5
   vite: 4.1.4
@@ -95,7 +95,7 @@ packages:
     dependencies:
       '@vscode/emmet-helper': 2.8.6
       events: 3.3.0
-      prettier: 2.8.4
+      prettier: 2.8.7
       prettier-plugin-astro: 0.7.2
       source-map: 0.7.4
       vscode-css-languageservice: 6.2.4
@@ -4593,7 +4593,7 @@ packages:
     engines: {node: ^14.15.0 || >=16.0.0, pnpm: '>=7.14.0'}
     dependencies:
       '@astrojs/compiler': 0.31.4
-      prettier: 2.8.4
+      prettier: 2.8.7
       sass-formatter: 0.7.6
       synckit: 0.8.5
     dev: false
@@ -4603,12 +4603,12 @@ packages:
     engines: {node: ^14.15.0 || >=16.0.0, pnpm: '>=7.14.0'}
     dependencies:
       '@astrojs/compiler': 1.1.2
-      prettier: 2.8.4
+      prettier: 2.8.7
       sass-formatter: 0.7.6
       synckit: 0.8.5
     dev: true
 
-  /prettier-plugin-packagejson/2.4.3_prettier@2.8.4:
+  /prettier-plugin-packagejson/2.4.3_prettier@2.8.7:
     resolution: {integrity: sha512-kPeeviJiwy0BgOSk7No8NmzzXfW4R9FYWni6ziA5zc1kGVVrKnBzMZdu2TUhI+I7h8/5Htt3vARYOk7KKJTTNQ==}
     peerDependencies:
       prettier: '>= 1.16.0'
@@ -4616,7 +4616,7 @@ packages:
       prettier:
         optional: true
     dependencies:
-      prettier: 2.8.4
+      prettier: 2.8.7
       sort-package-json: 2.4.1
       synckit: 0.8.5
     dev: true
@@ -4631,7 +4631,7 @@ packages:
       prettier: 2.8.4
     dev: true
 
-  /prettier-plugin-tailwindcss/0.2.3_cfgkwvtfb3vmyej4cugnuognhu:
+  /prettier-plugin-tailwindcss/0.2.3_kb4gmvngxncp3puqxt3b6slppy:
     resolution: {integrity: sha512-s2N5Dh7Ao5KTV1mao5ZBnn8EKtUcDPJEkGViZIjI0Ij9TTI5zgTz4IHOxW33jOdjHKa8CSjM88scelUiC5TNRQ==}
     engines: {node: '>=12.17.0'}
     peerDependencies:
@@ -4683,12 +4683,18 @@ packages:
       prettier-plugin-twig-melody:
         optional: true
     dependencies:
-      prettier: 2.8.4
+      prettier: 2.8.7
       prettier-plugin-astro: 0.8.0
     dev: true
 
   /prettier/2.8.4:
     resolution: {integrity: sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
+
+  /prettier/2.8.7:
+    resolution: {integrity: sha512-yPngTo3aXUUmyuTjeTUT75txrf+aMh9FiD7q9ZE/i6r0bPb22g4FsE6Y338PQX1bmfy08i9QQCB7/rcUAVntfw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
 
