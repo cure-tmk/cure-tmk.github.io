@@ -9,7 +9,7 @@ specifiers:
   astro: 2.2.2
   eslint: 8.38.0
   eslint-config-import: 0.13.0
-  eslint-config-prettier: 8.6.0
+  eslint-config-prettier: 8.8.0
   eslint-plugin-astro: 0.23.0
   eslint-plugin-import: 2.27.5
   npm-run-all: 4.1.5
@@ -36,7 +36,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.53.0_ze6bmax3gcsfve3yrzu6npguhe
   eslint: 8.38.0
   eslint-config-import: 0.13.0_5rfvta7qn57kxm7ir36ta6fixq
-  eslint-config-prettier: 8.6.0_eslint@8.38.0
+  eslint-config-prettier: 8.8.0_eslint@8.38.0
   eslint-plugin-astro: 0.23.0_eslint@8.38.0
   eslint-plugin-import: 2.27.5_5fwcxyocz6uihr5sszazu32hvq
   npm-run-all: 4.1.5
@@ -2440,8 +2440,8 @@ packages:
       eslint-plugin-import: 2.27.5_5fwcxyocz6uihr5sszazu32hvq
     dev: true
 
-  /eslint-config-prettier/8.6.0_eslint@8.38.0:
-    resolution: {integrity: sha512-bAF0eLpLVqP5oEVUFKpMA+NnRFICwn9X8B5jrR9FcqnYBuPbqWEjTEspPWMj5ye6czoSLDweCzSo3Ko7gGrZaA==}
+  /eslint-config-prettier/8.8.0_eslint@8.38.0:
+    resolution: {integrity: sha512-wLbQiFre3tdGgpDv67NQKnJuTlcUVYHas3k+DZCc2U2BadthoEY4B7hLPvAxaqdyOGCzuLfii2fqGph10va7oA==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
