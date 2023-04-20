@@ -3,17 +3,12 @@ name: Checks
 on:
   push:
 
-env:
-  PNPM_VERSION: 7.9.4
-
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.5.2
+      - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
-        with:
-          version: ${{ env.PNPM_VERSION }}
       - uses: actions/setup-node@v3
         with:
           node-version-file: '.node-version'
