@@ -7,12 +7,7 @@ module.exports = {
   trailingComma: 'all',
   arrowParens: 'always',
   printWidth: 120,
-  plugins: [
-    'prettier-plugin-packagejson',
-    'prettier-plugin-scaffdog',
-    'prettier-plugin-astro',
-    'prettier-plugin-tailwindcss',
-  ],
+  plugins: ['prettier-plugin-packagejson', 'prettier-plugin-astro', 'prettier-plugin-tailwindcss'],
   overrides: [
     {
       files: '*.astro',

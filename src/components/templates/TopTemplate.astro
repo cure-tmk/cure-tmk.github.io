@@ -1,0 +1,137 @@
+---
+import { constants } from '../../constants';
+import GitHubIcon from '../icons/GitHubIcon.astro';
+import InstagramIcon from '../icons/InstagramIcon.astro';
+import TwitterIcon from '../icons/TwitterIcon.astro';
+import { asset } from '../../utils/UrlUtils';
+import Image from '../media/Image.astro';
+import Link from '../navitation/Link.astro';
+import Text from '../typography/Text.astro';
+import Container from '../layouts/Container.astro';
+import CommonTemplate from './CommonTemplate.astro';
+
+const SOCIALS = [
+  {
+    name: 'Twitter',
+    id: `@${constants.social.twitter}`,
+    href: `https://twitter.com/${constants.social.twitter}`,
+    icon: TwitterIcon,
+  },
+  {
+    name: 'GitHub',
+    id: `@${constants.social.github}`,
+    href: `https://github.com/${constants.social.github}`,
+    icon: GitHubIcon,
+  },
+  {
+    name: 'Instagram',
+    id: `@${constants.social.instagram}`,
+    href: `https://www.instagram.com/${constants.social.instagram}`,
+    icon: InstagramIcon,
+  },
+] as const;
+---
+
+<CommonTemplate title="hi">
+  <!-- keyvisual -->
+  <section class="relative h-[512px] overflow-hidden">
+    <Image
+      alt=""
+      class="absolute left-[50%] top-[50%] z-[-1] max-w-none translate-x-[-50%] translate-y-[-50%] object-cover lg:min-w-full"
+      format={'jpg'}
+      src={asset('kv-bg.jpg')}
+      srcset={[`${asset('kv-bg.jpg')}`, `${asset('kv-bg@1.5x.jpg')} 1.5x`, `${asset('kv-bg@2x.jpg')} 2x`].join(', ')}
+      width={1400}
+      height={516}
+    />
+    <div class="flex h-full justify-center">
+      <div class="flex flex-col items-center justify-center lg:flex-row-reverse">
+        <Image
+          alt="cure_tmk"
+          class="h-[128px] w-[128px] rounded-full border-2 border-solid border-black duration-100 ease-in-out hover:scale-105 hover:border-transparent lg:h-[160px] lg:w-[160px]"
+          format={'jpg'}
+          src={asset('main-icon.jpg')}
+          srcset={[
+            `${asset('main-icon.jpg')}`,
+            `${asset('main-icon@1.5x.jpg')} 1.5x`,
+            `${asset('main-icon@2x.jpg')} 2x`,
+          ].join(', ')}
+          width={160}
+          height={160}
+        />
+
+        <div class="lg:mt-none mt-4 text-center lg:mr-20 lg:text-left">
+          <Text as="h1" class="mb-1 text-2xl font-bold lg:mb-2 lg:text-4xl">cure_tmk</Text>
+          <Text class="lg:text-xl">Tomoki Kano / 狩野智輝</Text>
+          <div class="mt-4 flex justify-center gap-2 lg:justify-start">
+            {
+              SOCIALS.map(({ name, id, href, icon: Icon }) => (
+                <Link title={name} href={href} class="rounded-full duration-100 hover:opacity-80 focus:opacity-80">
+                  <Icon aria-label={id} size="2rem" />
+                </Link>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- body -->
+
+  <Container>
+    <div class="mb-4"></div>
+
+    <!-- about -->
+    <Text as="h2" class="mb-4 mt-6 text-xl">About</Text>
+    <Text as="p">
+      Hi, my name is Tomoki. Welcome to my corner of the Internet. I&apos;m a frontend web engineer based in Tokyo. I
+      focus on creating elegant, performant, and accessible digital experiences for both users and developers.
+    </Text>
+
+    <!-- resume -->
+    <Text as="h2" class="mb-4 mt-6 text-xl">Resume</Text>
+    <ol>
+      <li>
+        Full-time Web Developer at CyberAgent Inc. since 2019. Worked on:
+        <ul>
+          <li>
+            <Link href="https://www.winticket.jp" target="_blank">WinTicket</Link> (Online Betting Service for Keirin (Cycle
+            Race))
+          </li>
+          <li>
+            <Link href="https://ameblo.jp/" target="_blank">Ameba Blog</Link> (Japan&apos;s Largest Blog Service)
+          </li>
+        </ul>
+      </li>
+      <li>Graduated Doshisha Univ. (2019)</li>
+      <li>
+        Worked full-stack on <Link href="https://plus.pixta.co.jp/entry/2020/12/28/120000" target="_blank">
+          mecelo.co.jp
+        </Link> (2018-2019)
+      </li>
+    </ol>
+
+    <!-- contacts -->
+    <Text as="h2" class="mb-4 mt-6 text-xl">Contacts</Text>
+    <p>
+      I am always open to discussing new projects, ideas or opportunities to be a part of your vision. Please contact me
+      via email or Twitter DM.
+    </p>
+
+    <div class="mb-2"></div>
+
+    <ul>
+      {
+        SOCIALS.map(({ name, id, href }) => (
+          <li>
+            {name}:
+            <Link href={href} target="_blank">
+              {id}
+            </Link>
+          </li>
+        ))
+      }
+    </ul>
+  </Container>
+</CommonTemplate>
