@@ -4,11 +4,11 @@ import type { Range } from '../../utils/TypeUtils';
 
 export type HTMLTextElements = `h${Range<1, 7>}` | 'p' | 'span' | 'strong' | 'blockquote';
 
-export type Props<T extends HTMLTextElements> = HTMLAttributes<T> & {
-  as?: T;
-};
+export interface Props extends HTMLAttributes<HTMLTextElements> {
+  as?: HTMLTextElements;
+}
 
-const { as, ...rest } = Astro.props;
+const { as, slot, ...rest } = Astro.props;
 
 const Element = as || 'span';
 ---
