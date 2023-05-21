@@ -6,7 +6,8 @@ export const constants = {
   },
   social: {
     twitter: 'cure_tmk',
-    instagram: 'cure_tmk',
     github: 'cure-tmk',
+    bluesky: 'cure-tmk',
+    instagram: 'cure_tmk',
   },
 } as const;

@@ -1,5 +1,6 @@
 ---
 import { constants } from '../../constants';
+import AtIcon from '../icons/AtIcon.astro';
 import GitHubIcon from '../icons/GitHubIcon.astro';
 import InstagramIcon from '../icons/InstagramIcon.astro';
 import TwitterIcon from '../icons/TwitterIcon.astro';
@@ -22,6 +23,12 @@ const SOCIALS = [
     id: `@${constants.social.github}`,
     href: `https://github.com/${constants.social.github}`,
     icon: GitHubIcon,
+  },
+  {
+    name: 'Bluesky',
+    id: `@${constants.social.bluesky}`,
+    href: `https://bsky.app/profile/${constants.social.bluesky}.bsky.social`,
+    icon: AtIcon,
   },
   {
     name: 'Instagram',
