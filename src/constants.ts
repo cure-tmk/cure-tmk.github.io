@@ -1,8 +1,8 @@
 export const constants = {
   site: {
     language: 'ja',
-    title: 'cure_tmk',
-    description: 'cure_tmk',
+    title: 'cure-tmk',
+    description: 'cure-tmk',
   },
   social: {
     twitter: 'cure_tmk',
