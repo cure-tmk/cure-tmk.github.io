@@ -1,0 +1,10 @@
+---
+import TopTemplate from '../../components/templates/TopTemplate.astro';
+import { i18nContents } from '../../contents';
+import { getLangFromUrl } from '../../utils/I18nUtils';
+
+const lang = getLangFromUrl(Astro.url);
+const contents = i18nContents.get(lang);
+---
+
+<TopTemplate about={contents['top.about']} resume={contents['top.resume']} />

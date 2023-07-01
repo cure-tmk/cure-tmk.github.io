@@ -1,8 +1,11 @@
+import { I18nLanguage } from './i18n';
+
 export const constants = {
   site: {
-    language: 'ja',
     title: 'cure-tmk',
     description: 'cure-tmk',
+    defaultLanguage: I18nLanguage.Ja,
+    languages: [I18nLanguage.Ja, I18nLanguage.En],
   },
   social: {
     twitter: 'cure_tmk',

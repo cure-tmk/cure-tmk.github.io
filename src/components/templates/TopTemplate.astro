@@ -1,15 +1,16 @@
 ---
 import { constants } from '../../constants';
+import type { Contents } from '../../contents';
+import { asset } from '../../utils/UrlUtils';
 import AtIcon from '../icons/AtIcon.astro';
 import GitHubIcon from '../icons/GitHubIcon.astro';
 import InstagramIcon from '../icons/InstagramIcon.astro';
 import TwitterIcon from '../icons/TwitterIcon.astro';
-import { asset } from '../../utils/UrlUtils';
+import Container from '../layouts/Container.astro';
 import Image from '../media/Image.astro';
 import Link from '../navitation/Link.astro';
 import Text from '../typography/Text.astro';
-import Container from '../layouts/Container.astro';
-import CommonTemplate from './CommonTemplate.astro';
+import BaseTemplate from './BaseTemplate.astro';
 
 const SOCIALS = [
   {
@@ -37,9 +38,16 @@ const SOCIALS = [
     icon: InstagramIcon,
   },
 ] as const;
+
+export type Props = {
+  about: Contents['top.about'];
+  resume: Contents['top.resume'];
+};
+
+const { about, resume } = Astro.props;
 ---
 
-<CommonTemplate title="hi">
+<BaseTemplate title="hi">
   <!-- keyvisual -->
   <section class="relative h-[512px] overflow-hidden">
     <Image
@@ -90,41 +98,45 @@ const SOCIALS = [
     <div class="mb-4"></div>
 
     <!-- about -->
-    <Text as="h2" class="mb-4 mt-6 text-xl">About</Text>
-    <Text as="p">
-      Hi, my name is Tomoki. Welcome to my corner of the Internet. I&apos;m a frontend web engineer based in Tokyo. I
-      focus on creating elegant, performant, and accessible digital experiences for both users and developers.
+    <Text as="h2" class="mb-4 mt-6 text-xl font-bold">About</Text>
+    <Text as="p" class="whitespace-pre-wrap">
+      {about}
     </Text>
 
     <!-- resume -->
-    <Text as="h2" class="mb-4 mt-6 text-xl">Resume</Text>
-    <ol>
-      <li>
-        Full-time Web Developer at CyberAgent Inc. since 2019. Worked on:
-        <ul>
-          <li>
-            <Link href="https://www.winticket.jp" target="_blank">WinTicket</Link> (Online Betting Service for Keirin (Cycle
-            Race))
+    <Text as="h2" class="mb-4 mt-8 text-xl font-bold">Resume</Text>
+    <ol class="flex flex-col gap-6">
+      {
+        resume.map((resumeItem) => (
+          <li class="before:contents=[''] after:contents=[''] befrore:bg-white relative pl-6 before:absolute before:left-0 before:top-1.5 before:block before:h-3 before:w-3 before:rounded-full before:bg-cure-blue after:absolute after:left-1 after:top-6 after:h-full after:w-0.5 after:translate-x-1/2 after:rounded-sm after:bg-cure-blue last:after:content-none">
+            <div class="flex flex-col items-baseline lg:flex-row lg:gap-2">
+              <Text class="block text-base font-semibold">{resumeItem.title}</Text>
+              <Text class="block text-sm text-slate-500">{resumeItem.term}</Text>
+            </div>
+            {resumeItem.description && (
+              <div class="mt-1">
+                <Text class="block text-sm text-slate-700">{resumeItem.description}</Text>
+              </div>
+            )}
+
+            {resumeItem.products && (
+              <ul class="mt-1 flex flex-col">
+                {resumeItem.products.map((product) => (
+                  <li class="before:contents=[''] relative pl-4 before:absolute before:left-1 before:top-3 before:block before:h-1 before:w-1 before:rounded-full before:bg-cure-blue">
+                    <Link href={product.href} target="_blank" class="text-sm">
+                      {product.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
-          <li>
-            <Link href="https://ameblo.jp/" target="_blank">Ameba Blog</Link> (Japan&apos;s Largest Blog Service)
-          </li>
-        </ul>
-      </li>
-      <li>Graduated Doshisha Univ. (2019)</li>
-      <li>
-        Worked full-stack on <Link href="https://plus.pixta.co.jp/entry/2020/12/28/120000" target="_blank">
-          mecelo.co.jp
-        </Link> (2018-2019)
-      </li>
+        ))
+      }
     </ol>
 
     <!-- contacts -->
-    <Text as="h2" class="mb-4 mt-6 text-xl">Contacts</Text>
-    <p>
-      I am always open to discussing new projects, ideas or opportunities to be a part of your vision. Please contact me
-      via email or Twitter DM.
-    </p>
+    <Text as="h2" class="mb-4 mt-8 text-xl font-bold">Contacts</Text>
 
     <div class="mb-2"></div>
 
@@ -141,4 +153,4 @@ const SOCIALS = [
       }
     </ul>
   </Container>
-</CommonTemplate>
+</BaseTemplate>
