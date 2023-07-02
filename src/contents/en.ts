@@ -1,6 +1,10 @@
 import type { Contents } from '.';
 
 export const enContents: Contents = {
+  ui: {
+    'lang.label': 'Languages',
+    'lang.selected': 'selected',
+  },
   'top.about': [
     "Hi, I'm Tomoki, a detail-oriented web frontend developer who believes in the power of clean, performant, and accessible code.",
     "With a strong background in TypeScript and React, I'm dedicated to creating beautiful web experiences that leave a lasting impression.",

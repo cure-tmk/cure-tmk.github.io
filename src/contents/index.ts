@@ -13,6 +13,10 @@ type TopResumeContent = {
 }[];
 
 export type Contents = {
+  ui: {
+    'lang.label': string;
+    'lang.selected': string;
+  };
   'top.about': string;
   'top.resume': TopResumeContent;
 };

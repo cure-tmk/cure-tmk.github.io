@@ -1,22 +1,11 @@
-import { config } from '../config';
 import { I18nLanguage } from '../constants/i18n';
-import { getLangFromUrl } from './I18nUtils';
-
-const BASE_URL = config.get('VITE_BASE_URL');
+import { getLangLabel } from './I18nUtils';
 
 describe('utils/I18nUtils', () => {
-  test.each<[string, I18nLanguage]>([
-    // valid
-    ['/ja', I18nLanguage.Ja],
-    ['/en', I18nLanguage.En],
-    ['/en/foo', I18nLanguage.En],
-
-    // invalid
-    ['/', I18nLanguage.Ja],
-    ['/fr', I18nLanguage.Ja],
-    ['/english', I18nLanguage.Ja],
-  ])('getLangFromUrl', (path, expected) => {
-    const url = new URL(`${BASE_URL}${path}`);
-    expect(getLangFromUrl(url)).toEqual(expected);
+  test.each<[I18nLanguage, string]>([
+    [I18nLanguage.Ja, 'Ja'],
+    [I18nLanguage.En, 'En'],
+  ])('getLangLabel(%s) = %s', (lang, label) => {
+    expect(getLangLabel(lang)).toBe(label);
   });
 });

@@ -1,6 +1,10 @@
 import type { Contents } from '.';
 
 export const jaContents: Contents = {
+  ui: {
+    'lang.label': '言語',
+    'lang.selected': '選択中',
+  },
   'top.about': [
     '渋谷で働く Web フロントエンジニアです．',
     'TypeScript / React を使って開発することが多く，すべてのユーザーに体験に高速でアクセシブルな"最高の Web 体験"を届けることを目指しています．',

@@ -1,9 +1,9 @@
 ---
-import { asset } from '../../utils/UrlUtils';
+import { asset, getUrlLang } from '../../utils/UrlUtils';
 import { compact } from '../../utils/ArrayUtils';
 import { constants } from '../../constants';
-import { getLangFromUrl } from '../../utils/I18nUtils';
 import Footer from '../Footer.astro';
+import LangSwitcher from '../navitation/LangSwitcher.astro';
 
 export interface Props {
   title?: string;
@@ -11,7 +11,7 @@ export interface Props {
   image?: string;
 }
 
-const lang = getLangFromUrl(Astro.url);
+const lang = getUrlLang(Astro.url);
 
 const {
   title: titleProp,
@@ -58,6 +58,10 @@ const title = compact([constants.site.title, titleProp]).join(' - ');
   </head>
 
   <body>
+    <div class="fixed right-2 top-2 z-10">
+      <LangSwitcher url={Astro.url} lang={lang} />
+    </div>
+
     <div class="mb-10">
       <main>
         <slot />

@@ -1,0 +1,95 @@
+---
+import { constants } from '../../constants';
+import type { I18nLanguage } from '../../constants/i18n';
+import { i18nContents } from '../../contents';
+import { getLangLabel } from '../../utils/I18nUtils';
+import { getLangUrl } from '../../utils/UrlUtils';
+import GlobeIcon from '../icons/GlobeIcon.astro';
+import Link from './Link.astro';
+
+export type Props = {
+  lang: I18nLanguage;
+  url: URL;
+};
+
+const contents = i18nContents.get(Astro.props.lang);
+
+const currentLabel = getLangLabel(Astro.props.lang);
+
+const options = constants.site.languages.map((lang) => ({
+  lang,
+  label: getLangLabel(lang),
+  current: lang === Astro.props.lang,
+}));
+
+const next = (() => {
+  const currentIndex = options.findIndex(({ current }) => current);
+  const nextIndex = currentIndex < constants.site.languages.length - 1 ? currentIndex + 1 : 0;
+  return options[nextIndex];
+})();
+
+const nextHref = next != null ? getLangUrl(Astro.props.url, next.lang).pathname : null;
+---
+
+<style>
+  .wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: theme(gap.1);
+    padding: theme(padding.1) theme(padding.3);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: theme(borderRadius.full);
+  }
+
+  .wrapper > svg {
+    width: theme(fontSize.xs);
+
+    @media screen(lg) {
+      & {
+        width: theme(fontSize.sm);
+      }
+    }
+  }
+
+  .lang-label {
+    color: theme(colors.slate.300);
+    font-size: theme(fontSize.xs);
+    text-transform: uppercase;
+
+    &[data-current] {
+      color: theme(colors.slate.700);
+    }
+
+    @media screen(lg) {
+      & {
+        font-size: theme(fontSize.sm);
+      }
+    }
+  }
+</style>
+
+{
+  nextHref ? (
+    <Link
+      href={nextHref}
+      class="wrapper duration-100 hover:opacity-80 focus:opacity-80"
+      aria-label={options
+        .map(({ label, current }) => `${label}${current ? `(${contents.ui['lang.selected']})` : ''}`)
+        .join(' ')}
+    >
+      <GlobeIcon aria-hidden title={contents.ui['lang.label']} />
+      {options.map(({ label, current }) => (
+        <span class="lang-label" data-current={current}>
+          {label}
+        </span>
+      ))}
+    </Link>
+  ) : (
+    <div class="wrapper">
+      <GlobeIcon aria-hidden title={contents.ui['lang.label']} />
+      <span class="lang-label" data-current>
+        {currentLabel}
+      </span>
+    </div>
+  )
+}
