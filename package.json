@@ -20,7 +20,7 @@
     "scaffold": "scaffdog generate -f"
   },
   "dependencies": {
-    "@astrojs/image": "0.17.2",
+    "@astrojs/image": "0.17.3",
     "@astrojs/tailwind": "4.0.0",
     "astro": "2.9.7",
     "tailwindcss": "3.3.3"
