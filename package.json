@@ -40,7 +40,7 @@
     "prettier-plugin-scaffdog": "2.5.1",
     "prettier-plugin-tailwindcss": "0.5.3",
     "scaffdog": "2.5.1",
-    "typescript": "5.1.6",
+    "typescript": "5.2.2",
     "vite": "4.4.9",
     "vitest": "0.34.2"
   },
