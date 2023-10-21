@@ -65,8 +65,8 @@ devDependencies:
     specifier: 5.2.2
     version: 5.2.2
   vite:
-    specifier: 4.4.11
-    version: 4.4.11(@types/node@18.14.1)
+    specifier: 4.5.0
+    version: 4.5.0(@types/node@18.14.1)
   vitest:
     specifier: 0.34.6
     version: 0.34.6
@@ -1635,8 +1635,8 @@ packages:
       typescript: 5.2.2
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.4.11(@types/node@18.14.1)
-      vitefu: 0.2.4(vite@4.4.11)
+      vite: 4.5.0(@types/node@18.14.1)
+      vitefu: 0.2.4(vite@4.5.0)
       which-pm: 2.0.0
       yargs-parser: 21.1.1
       zod: 3.20.6
@@ -6286,7 +6286,7 @@ packages:
       mlly: 1.4.0
       pathe: 1.1.1
       picocolors: 1.0.0
-      vite: 4.4.11(@types/node@18.14.1)
+      vite: 4.5.0(@types/node@18.14.1)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -6298,8 +6298,8 @@ packages:
       - terser
     dev: true
 
-  /vite@4.4.11(@types/node@18.14.1):
-    resolution: {integrity: sha512-ksNZJlkcU9b0lBwAGZGGaZHCMqHsc8OpgtoYhsQ4/I2v5cnpmmmqe5pM4nv/4Hn6G/2GhTdj0DhZh2e+Er1q5A==}
+  /vite@4.5.0(@types/node@18.14.1):
+    resolution: {integrity: sha512-ulr8rNLA6rkyFAlVWw2q5YJ91v098AFQ2R0PRFwPzREXOUJQPtFUG0t+/ZikhaOCDqFoDhN6/v8Sq0o4araFAw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -6333,7 +6333,7 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /vitefu@0.2.4(vite@4.4.11):
+  /vitefu@0.2.4(vite@4.5.0):
     resolution: {integrity: sha512-fanAXjSaf9xXtOOeno8wZXIhgia+CZury481LsDaV++lSvcU2R9Ch2bPh3PYFyoHW+w9LqAeYRISVQjUIew14g==}
     peerDependencies:
       vite: ^3.0.0 || ^4.0.0
@@ -6341,7 +6341,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.4.11(@types/node@18.14.1)
+      vite: 4.5.0(@types/node@18.14.1)
     dev: false
 
   /vitest@0.34.6:
@@ -6396,7 +6396,7 @@ packages:
       strip-literal: 1.0.1
       tinybench: 2.5.0
       tinypool: 0.7.0
-      vite: 4.4.11(@types/node@18.14.1)
+      vite: 4.5.0(@types/node@18.14.1)
       vite-node: 0.34.6(@types/node@18.14.1)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
