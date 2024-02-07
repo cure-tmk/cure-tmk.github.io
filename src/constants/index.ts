@@ -8,7 +8,7 @@ export const constants = {
     languages: [I18nLanguage.Ja, I18nLanguage.En],
   },
   social: {
-    twitter: 'cure_tmk',
+    x: 'cure_tmk',
     github: 'cure-tmk',
     bluesky: 'cure-tmk',
     instagram: 'cure_tmk',

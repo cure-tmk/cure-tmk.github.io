@@ -5,7 +5,7 @@ import { asset } from '../../utils/UrlUtils';
 import AtIcon from '../icons/AtIcon.astro';
 import GitHubIcon from '../icons/GitHubIcon.astro';
 import InstagramIcon from '../icons/InstagramIcon.astro';
-import TwitterIcon from '../icons/TwitterIcon.astro';
+import XIcon from '../icons/XIcon.astro';
 import Container from '../layouts/Container.astro';
 import Image from '../media/Image.astro';
 import Link from '../navitation/Link.astro';
@@ -13,11 +13,11 @@ import Text from '../typography/Text.astro';
 import BaseTemplate from './BaseTemplate.astro';
 
 const SOCIALS = [
-  {
-    name: 'Twitter',
-    id: `@${constants.social.twitter}`,
-    href: `https://twitter.com/${constants.social.twitter}`,
-    icon: TwitterIcon,
+{
+    name: 'Bluesky',
+    id: `@${constants.social.bluesky}`,
+    href: `https://bsky.app/profile/${constants.social.bluesky}.bsky.social`,
+    icon: AtIcon,
   },
   {
     name: 'GitHub',
@@ -26,16 +26,16 @@ const SOCIALS = [
     icon: GitHubIcon,
   },
   {
-    name: 'Bluesky',
-    id: `@${constants.social.bluesky}`,
-    href: `https://bsky.app/profile/${constants.social.bluesky}.bsky.social`,
-    icon: AtIcon,
-  },
-  {
     name: 'Instagram',
     id: `@${constants.social.instagram}`,
     href: `https://www.instagram.com/${constants.social.instagram}`,
     icon: InstagramIcon,
+  },
+  {
+    name: 'X',
+    id: `@${constants.social.x}`,
+    href: `https://x.com/${constants.social.x}`,
+    icon: XIcon,
   },
 ] as const;
 

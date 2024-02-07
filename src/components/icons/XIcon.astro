@@ -1,0 +1,20 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import { StyleValue, normalizeStyleValue } from '../../utils/StyleUtils';
+
+export type Props = HTMLAttributes<'svg'> & {
+  title?: string;
+  size?: StyleValue;
+};
+
+const { title: rawTitle, size: rawSize, ...rest } = Astro.props;
+
+const size = normalizeStyleValue(rawSize) ?? '24px';
+const title = rawTitle ?? 'Twitter';
+---
+
+<svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...rest}>
+  <title>{title}</title>
+  <path d="M13.7307 11.2808L19.0356 5.25H17.7785L13.1723 10.4865L9.49327 5.25H5.25L10.8133 13.1685L5.25 19.4927H6.50716L11.3715 13.9628L15.2567 19.4927H19.5L13.7307 11.2808ZM12.0088 13.2382L11.4452 12.4497L6.96013 6.17555H8.89105L12.5105 11.239L13.0742 12.0275L17.7791 18.6092H15.8482L12.0088 13.2382Z" fill="currentcolor"/>    
+</svg>
+
