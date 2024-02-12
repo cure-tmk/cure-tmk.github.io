@@ -10,7 +10,7 @@ export type Props = HTMLAttributes<'svg'> & {
 const { title: rawTitle, size: rawSize, ...rest } = Astro.props;
 
 const size = normalizeStyleValue(rawSize) ?? '24px';
-const title = rawTitle ?? 'Twitter';
+const title = rawTitle ?? 'X';
 ---
 
 <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...rest}>
