@@ -1,0 +1,13 @@
+name: Deps
+description: Install Dependencies
+runs:
+  using: composite
+  steps:
+    - uses: pnpm/action-setup@v3
+    - uses: actions/setup-node@v4
+      with:
+        node-version-file: '.node-version'
+        cache: 'pnpm'
+    - name: Install
+      run: pnpm i --frozen-lockfile
+      shell: bash
