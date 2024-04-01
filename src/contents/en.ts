@@ -12,9 +12,20 @@ export const enContents: Contents = {
   ].join('\n'),
   'top.resume': [
     {
+      title: '👨‍💻 mikan Co., Ltd.',
+      description: 'Web frontend engineer',
+      term: '2024 - present',
+      products: [
+        {
+          title: 'mikan for School',
+          href: 'https://forschool.mikan.link/',
+        },
+      ],
+    },
+    {
       title: '👨‍💻 CyberAgent, Inc.',
       description: 'Web frontend engineer',
-      term: '2019 - present',
+      term: '2019 - 2024',
       products: [
         {
           title: 'WINTICKET',
