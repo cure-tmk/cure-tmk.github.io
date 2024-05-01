@@ -43,7 +43,7 @@
     "prettier-plugin-tailwindcss": "0.5.14",
     "rimraf": "5.0.5",
     "scaffdog": "2.5.1",
-    "typescript": "5.3.3",
+    "typescript": "5.4.5",
     "vite": "4.5.3",
     "vitest": "0.34.6"
   },
