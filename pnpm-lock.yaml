@@ -47,8 +47,8 @@ devDependencies:
     specifier: 2.8.8
     version: 2.8.8
   prettier-plugin-astro:
-    specifier: 0.14.0
-    version: 0.14.0
+    specifier: 0.14.1
+    version: 0.14.1
   prettier-plugin-packagejson:
     specifier: 2.5.0
     version: 2.5.0(prettier@2.8.8)
@@ -57,7 +57,7 @@ devDependencies:
     version: 2.5.1
   prettier-plugin-tailwindcss:
     specifier: 0.6.2
-    version: 0.6.2(prettier-plugin-astro@0.14.0)(prettier@2.8.8)
+    version: 0.6.2(prettier-plugin-astro@0.14.1)(prettier@2.8.8)
   rimraf:
     specifier: 5.0.7
     version: 5.0.7
@@ -100,9 +100,14 @@ packages:
 
   /@astrojs/compiler@1.8.1:
     resolution: {integrity: sha512-C28qplQzgIJ+JU9S+1wNx+ue2KCBUp0TTAd10EWAEkk4RsL3Tzlw0BYvLDDb4KP9jS48lXmR4/1TtZ4aavYJ8Q==}
+    dev: false
 
   /@astrojs/compiler@2.0.1:
     resolution: {integrity: sha512-DfBR7Cf+tOgQ4n7TIgTtU5x5SEA/08DNshpEPcT+91A0KbBlmUOYMBM/O6qAaHkmVo1KIoXQYhAmfdTT1zx9PQ==}
+    dev: true
+
+  /@astrojs/compiler@2.10.3:
+    resolution: {integrity: sha512-bL/O7YBxsFt55YHU021oL+xz+B/9HvGNId3F9xURN16aeqDK9juHGktdkCSXz+U4nqFACq6ZFvWomOzhV+zfPw==}
     dev: true
 
   /@astrojs/image@0.18.0(astro@2.10.15):
@@ -5832,11 +5837,11 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /prettier-plugin-astro@0.14.0:
-    resolution: {integrity: sha512-7jRGJsexaRIyUzTk8uzXlP45cw6DQ5Ci4bTe0xCBCcuO1Fff8jJy9oI+kRCQKSdDFTSAArMSg8GpvzlKBtSaZA==}
+  /prettier-plugin-astro@0.14.1:
+    resolution: {integrity: sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==}
     engines: {node: ^14.15.0 || >=16.0.0}
     dependencies:
-      '@astrojs/compiler': 1.8.1
+      '@astrojs/compiler': 2.10.3
       prettier: 3.0.0
       sass-formatter: 0.7.6
     dev: true
@@ -5874,7 +5879,7 @@ packages:
       prettier: 2.8.8
     dev: true
 
-  /prettier-plugin-tailwindcss@0.6.2(prettier-plugin-astro@0.14.0)(prettier@2.8.8):
+  /prettier-plugin-tailwindcss@0.6.2(prettier-plugin-astro@0.14.1)(prettier@2.8.8):
     resolution: {integrity: sha512-eFefm4cg+1c2B57+H274Qm//CTWBdtQN9ansl0YTP/8TC8x3bugCTQSS/e4FC5Ctl9djhTzsbcMrZ7x2/abIow==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
@@ -5927,7 +5932,7 @@ packages:
         optional: true
     dependencies:
       prettier: 2.8.8
-      prettier-plugin-astro: 0.14.0
+      prettier-plugin-astro: 0.14.1
     dev: true
 
   /prettier@2.8.8:
