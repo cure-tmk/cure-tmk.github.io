@@ -1,8 +1,8 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
+import type { HTMLAttributes } from "astro/types";
 
-export type Props = HTMLAttributes<'a'> & {
-  href: string;
+export type Props = HTMLAttributes<"a"> & {
+	href: string;
 };
 
 const { target, rel, ...rest } = Astro.props;

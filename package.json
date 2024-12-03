@@ -1,54 +1,44 @@
 {
-  "name": "cure-tmk.github.io",
-  "version": "1.0.0",
-  "license": "ISC",
-  "author": "@cure-tmk",
-  "scripts": {
-    "clean": "rimraf dist",
-    "build": "pnpm clean && astro build",
-    "dev": "astro dev",
-    "prod": "NODE_ENV=production pnpm build",
-    "test": "vitest",
-    "typecheck": "run-p typecheck:*",
-    "typecheck:script": "tsc -p .",
-    "typecheck:astro": "astro check",
-    "format": "run-s 'format:*'",
-    "format:prettier": "prettier --config prettier.config.js --write '**/*.+(ts|tsx|js|md|json|astro)'",
-    "format:script": "eslint --fix --ext .js,.ts,.tsx,.astro .",
-    "lint": "run-s 'lint:*'",
-    "lint:script": "eslint --ext .js,.ts,.astro .",
-    "preview": "astro preview",
-    "start": "astro preview",
-    "scaffold": "scaffdog generate -f"
-  },
-  "dependencies": {
-    "@astrojs/image": "0.18.0",
-    "@astrojs/tailwind": "5.1.3",
-    "astro": "5.0.1",
-    "tailwindcss": "3.4.15"
-  },
-  "devDependencies": {
-    "@types/jest": "29.5.14",
-    "@typescript-eslint/eslint-plugin": "8.17.0",
-    "@typescript-eslint/parser": "8.17.0",
-    "eslint": "9.16.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-astro": "1.3.1",
-    "eslint-plugin-import": "2.31.0",
-    "npm-run-all": "4.1.5",
-    "prettier": "3.4.1",
-    "prettier-plugin-astro": "0.14.1",
-    "prettier-plugin-packagejson": "2.5.6",
-    "prettier-plugin-scaffdog": "4.1.0",
-    "prettier-plugin-tailwindcss": "0.6.9",
-    "rimraf": "6.0.1",
-    "scaffdog": "4.1.0",
-    "typescript": "5.7.2",
-    "vite": "6.0.2",
-    "vitest": "2.1.8"
-  },
-  "packageManager": "pnpm@9.14.4",
-  "engines": {
-    "node": "22.11.0"
-  }
+	"name": "cure-tmk.github.io",
+	"version": "1.0.0",
+	"license": "ISC",
+	"author": "@cure-tmk",
+	"scripts": {
+		"clean": "rimraf dist",
+		"build": "pnpm clean && astro build",
+		"dev": "astro dev",
+		"prod": "NODE_ENV=production pnpm build",
+		"test": "vitest",
+		"typecheck": "run-p typecheck:*",
+		"typecheck:script": "tsc -p .",
+		"typecheck:astro": "astro check",
+		"check": "biome check .",
+		"check:fix": "biome check --write .",
+		"preview": "astro preview",
+		"start": "astro preview",
+		"scaffold": "scaffdog generate -f"
+	},
+	"dependencies": {
+		"@astrojs/check": "0.9.4",
+		"@astrojs/image": "0.18.0",
+		"@astrojs/tailwind": "5.1.3",
+		"astro": "5.0.1",
+		"tailwindcss": "3.4.15"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/jest": "29.5.14",
+		"@typescript-eslint/eslint-plugin": "8.17.0",
+		"@typescript-eslint/parser": "8.17.0",
+		"npm-run-all": "4.1.5",
+		"rimraf": "6.0.1",
+		"scaffdog": "4.1.0",
+		"typescript": "5.7.2",
+		"vite": "6.0.2",
+		"vitest": "2.1.8"
+	},
+	"packageManager": "pnpm@9.14.4",
+	"engines": {
+		"node": "22.11.0"
+	}
 }

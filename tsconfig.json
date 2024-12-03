@@ -1,7 +1,9 @@
 {
-  "extends": "astro/tsconfigs/strictest",
-  "compilerOptions": {
-    "skipLibCheck": true
-  },
-  "types": ["vitest/globals", "@types/jest"]
+	"extends": "astro/tsconfigs/base",
+	"include": [".astro/types.d.ts", "**/*"],
+	"exclude": ["dist"],
+	"compilerOptions": {
+		"skipLibCheck": true
+	},
+	"types": ["vitest/globals", "@types/jest"]
 }

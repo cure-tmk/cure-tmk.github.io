@@ -1,16 +1,16 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
-import { StyleValue, normalizeStyleValue } from '../../utils/StyleUtils';
+import type { HTMLAttributes } from "astro/types";
+import { type StyleValue, normalizeStyleValue } from "../../utils/StyleUtils";
 
-export type Props = HTMLAttributes<'svg'> & {
-  title?: string;
-  size?: StyleValue;
+export type Props = HTMLAttributes<"svg"> & {
+	title?: string;
+	size?: StyleValue;
 };
 
 const { title: rawTitle, size: rawSize, ...rest } = Astro.props;
 
-const size = normalizeStyleValue(rawSize) ?? '24px';
-const title = rawTitle ?? 'X';
+const size = normalizeStyleValue(rawSize) ?? "24px";
+const title = rawTitle ?? "X";
 ---
 
 <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...rest}>

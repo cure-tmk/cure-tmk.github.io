@@ -1,16 +1,21 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
-import type { Range } from '../../utils/TypeUtils';
+import type { HTMLAttributes } from "astro/types";
+import type { Range } from "../../utils/TypeUtils";
 
-export type HTMLTextElements = `h${Range<1, 7>}` | 'p' | 'span' | 'strong' | 'blockquote';
+type HTMLTextElements =
+	| `h${Range<1, 7>}`
+	| "p"
+	| "span"
+	| "strong"
+	| "blockquote";
 
 export interface Props extends HTMLAttributes<HTMLTextElements> {
-  as?: HTMLTextElements;
+	as?: HTMLTextElements;
 }
 
 const { as, slot, ...rest } = Astro.props;
 
-const Element = as || 'span';
+const Element = as || "span";
 ---
 
 <Element {...rest}><slot /></Element>

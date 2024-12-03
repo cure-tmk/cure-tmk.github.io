@@ -1,9 +1,13 @@
 ---
-import { Image, ImageComponentLocalImageProps, ImageComponentRemoteImageProps } from '@astrojs/image/components';
+import {
+	Image as AstroImage,
+	type ImageComponentLocalImageProps,
+	type ImageComponentRemoteImageProps,
+} from "@astrojs/image/components";
 
-export type Props = ImageComponentLocalImageProps | ImageComponentRemoteImageProps;
+type Props = ImageComponentLocalImageProps | ImageComponentRemoteImageProps;
 
 const { slot: _slot, ...props } = Astro.props;
 ---
 
-<Image {...props} />
+<AstroImage {...props} />

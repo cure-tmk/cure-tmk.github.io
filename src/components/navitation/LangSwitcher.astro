@@ -1,15 +1,15 @@
 ---
-import { constants } from '../../constants';
-import type { I18nLanguage } from '../../constants/i18n';
-import { i18nContents } from '../../contents';
-import { getLangLabel } from '../../utils/I18nUtils';
-import { getLangUrl } from '../../utils/UrlUtils';
-import GlobeIcon from '../icons/GlobeIcon.astro';
-import Link from './Link.astro';
+import { constants } from "../../constants";
+import type { I18nLanguage } from "../../constants/i18n";
+import { i18nContents } from "../../contents";
+import { getLangLabel } from "../../utils/I18nUtils";
+import { getLangUrl } from "../../utils/UrlUtils";
+import GlobeIcon from "../icons/GlobeIcon.astro";
+import Link from "./Link.astro";
 
 export type Props = {
-  lang: I18nLanguage;
-  url: URL;
+	lang: I18nLanguage;
+	url: URL;
 };
 
 const contents = i18nContents.get(Astro.props.lang);
@@ -17,18 +17,20 @@ const contents = i18nContents.get(Astro.props.lang);
 const currentLabel = getLangLabel(Astro.props.lang);
 
 const options = constants.site.languages.map((lang) => ({
-  lang,
-  label: getLangLabel(lang),
-  current: lang === Astro.props.lang,
+	lang,
+	label: getLangLabel(lang),
+	current: lang === Astro.props.lang,
 }));
 
 const next = (() => {
-  const currentIndex = options.findIndex(({ current }) => current);
-  const nextIndex = currentIndex < constants.site.languages.length - 1 ? currentIndex + 1 : 0;
-  return options[nextIndex];
+	const currentIndex = options.findIndex(({ current }) => current);
+	const nextIndex =
+		currentIndex < constants.site.languages.length - 1 ? currentIndex + 1 : 0;
+	return options[nextIndex];
 })();
 
-const nextHref = next != null ? getLangUrl(Astro.props.url, next.lang).pathname : null;
+const nextHref =
+	next != null ? getLangUrl(Astro.props.url, next.lang).pathname : null;
 ---
 
 <style>

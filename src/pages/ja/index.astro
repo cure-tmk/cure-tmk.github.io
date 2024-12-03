@@ -1,7 +1,7 @@
 ---
-import TopTemplate from '../../components/templates/TopTemplate.astro';
-import { i18nContents } from '../../contents';
-import { getUrlLang } from '../../utils/UrlUtils';
+import TopTemplate from "../../components/templates/TopTemplate.astro";
+import { i18nContents } from "../../contents";
+import { getUrlLang } from "../../utils/UrlUtils";
 
 const lang = getUrlLang(Astro.url);
 const contents = i18nContents.get(lang);
