@@ -13,13 +13,13 @@ importers:
         version: 0.9.4(typescript@5.7.3)
       '@astrojs/image':
         specifier: 0.18.0
-        version: 0.18.0(astro@5.1.10(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.7.3)(yaml@2.6.1))(sharp@0.33.5)
+        version: 0.18.0(astro@5.2.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.7.3)(yaml@2.6.1))(sharp@0.33.5)
       '@astrojs/tailwind':
         specifier: 5.1.5
-        version: 5.1.5(astro@5.1.10(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.7.3)(yaml@2.6.1))(tailwindcss@3.4.17)
+        version: 5.1.5(astro@5.2.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.7.3)(yaml@2.6.1))(tailwindcss@3.4.17)
       astro:
-        specifier: 5.1.10
-        version: 5.1.10(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.7.3)(yaml@2.6.1)
+        specifier: 5.2.0
+        version: 5.2.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.7.3)(yaml@2.6.1)
       tailwindcss:
         specifier: 3.4.17
         version: 3.4.17
@@ -83,8 +83,8 @@ packages:
       sharp:
         optional: true
 
-  '@astrojs/internal-helpers@0.4.2':
-    resolution: {integrity: sha512-EdDWkC3JJVcpGpqJAU/5hSk2LKXyG3mNGkzGoAuyK+xoPHbaVdSuIWoN1QTnmK3N/gGfaaAfM8gO2KDCAW7S3w==}
+  '@astrojs/internal-helpers@0.5.0':
+    resolution: {integrity: sha512-CgB5ZaZO1PFG+rbjF3HnA7G6gIBjJ070xb7bUjeu5Gqqufma+t6fpuRWMXnK2iEO3zVyX7e/xplPlqtFKy/lvw==}
 
   '@astrojs/language-server@2.15.4':
     resolution: {integrity: sha512-JivzASqTPR2bao9BWsSc/woPHH7OGSGc9aMxXL4U6egVTqBycB3ZHdBJPuOCVtcGLrzdWTosAqVPz1BVoxE0+A==}
@@ -98,8 +98,8 @@ packages:
       prettier-plugin-astro:
         optional: true
 
-  '@astrojs/markdown-remark@6.0.2':
-    resolution: {integrity: sha512-aAoHGVRK3rebCYbaLjyyR+3VeAuTz4q49syUxJP29Oo5yZHdy4cCAXRqLBdr9mJVlxCUUjZiF0Dau6YBf65SGg==}
+  '@astrojs/markdown-remark@6.1.0':
+    resolution: {integrity: sha512-emZNNSTPGgPc3V399Cazpp5+snogjaF04ocOSQn9vy3Kw/eIC4vTQjXOrWDEoSEy+AwPDZX9bQ4wd3bxhpmGgQ==}
 
   '@astrojs/prism@3.2.0':
     resolution: {integrity: sha512-GilTHKGCW6HMq7y3BUv9Ac7GMe/MO9gi9GW62GzKtth0SwukCu/qp2wLiGpEujhY+VVhaG9v7kv/5vFzvf4NYw==}
@@ -1074,8 +1074,8 @@ packages:
     resolution: {integrity: sha512-Izi8RQcffqCeNVgFigKli1ssklIbpHnCYc6AknXGYoB6grJqyeby7jv12JUQgmTAnIDnbck1uxksT4dzN3PWBA==}
     engines: {node: '>=12'}
 
-  astro@5.1.10:
-    resolution: {integrity: sha512-qFu4jC7BRlhwHgk9Pa1sTQWw60zYWlriNTt6bMGMKkPxCd4Dd84fGn+NjbrJ/JeKwF7YXX0gY1saDF/RS6TMVA==}
+  astro@5.2.0:
+    resolution: {integrity: sha512-6Y7Ph4aTeIifrJiD/b6JY4IoVTlWRVcA2pN1l7ioYSd+W8NsZL6LRZWWGeGHX7xlOD9ovsoG9duiSaydJ1Ua1Q==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2841,6 +2841,10 @@ packages:
     resolution: {integrity: sha512-FC+lgizVPfie0kkhqUScwRu1O/lF6NOgJmlCgK+/LYxDCTk8sGelYaHDhFcDN+Sn3Cv+3VSa4Byeo+IMCzpMgQ==}
     engines: {node: '>=12'}
 
+  smol-toml@1.3.1:
+    resolution: {integrity: sha512-tEYNll18pPKHroYSmLLrksq233j021G0giwW7P3D24jC54pQ5W5BXMsQ/Mvw1OJCmEYDgY+lrzT+3nNUtoNfXQ==}
+    engines: {node: '>= 18'}
+
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
@@ -3577,10 +3581,10 @@ snapshots:
 
   '@astrojs/compiler@2.10.3': {}
 
-  '@astrojs/image@0.18.0(astro@5.1.10(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.7.3)(yaml@2.6.1))(sharp@0.33.5)':
+  '@astrojs/image@0.18.0(astro@5.2.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.7.3)(yaml@2.6.1))(sharp@0.33.5)':
     dependencies:
       '@altano/tiny-async-pool': 1.0.3
-      astro: 5.1.10(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.7.3)(yaml@2.6.1)
+      astro: 5.2.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.7.3)(yaml@2.6.1)
       http-cache-semantics: 4.1.1
       image-size: 1.1.1
       kleur: 4.1.5
@@ -3589,7 +3593,7 @@ snapshots:
     optionalDependencies:
       sharp: 0.33.5
 
-  '@astrojs/internal-helpers@0.4.2': {}
+  '@astrojs/internal-helpers@0.5.0': {}
 
   '@astrojs/language-server@2.15.4(typescript@5.7.3)':
     dependencies:
@@ -3614,7 +3618,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@astrojs/markdown-remark@6.0.2':
+  '@astrojs/markdown-remark@6.1.0':
     dependencies:
       '@astrojs/prism': 3.2.0
       github-slugger: 2.0.0
@@ -3630,6 +3634,7 @@ snapshots:
       remark-rehype: 11.1.1
       remark-smartypants: 3.0.2
       shiki: 1.29.1
+      smol-toml: 1.3.1
       unified: 11.0.5
       unist-util-remove-position: 5.0.0
       unist-util-visit: 5.0.0
@@ -3642,9 +3647,9 @@ snapshots:
     dependencies:
       prismjs: 1.29.0
 
-  '@astrojs/tailwind@5.1.5(astro@5.1.10(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.7.3)(yaml@2.6.1))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@5.1.5(astro@5.2.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.7.3)(yaml@2.6.1))(tailwindcss@3.4.17)':
     dependencies:
-      astro: 5.1.10(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.7.3)(yaml@2.6.1)
+      astro: 5.2.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.7.3)(yaml@2.6.1)
       autoprefixer: 10.4.20(postcss@8.5.1)
       postcss: 8.5.1
       postcss-load-config: 4.0.2(postcss@8.5.1)
@@ -4484,11 +4489,11 @@ snapshots:
 
   assertion-error@2.0.1: {}
 
-  astro@5.1.10(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.7.3)(yaml@2.6.1):
+  astro@5.2.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.7.3)(yaml@2.6.1):
     dependencies:
       '@astrojs/compiler': 2.10.3
-      '@astrojs/internal-helpers': 0.4.2
-      '@astrojs/markdown-remark': 6.0.2
+      '@astrojs/internal-helpers': 0.5.0
+      '@astrojs/markdown-remark': 6.1.0
       '@astrojs/telemetry': 3.2.0
       '@oslojs/encoding': 1.1.0
       '@rollup/pluginutils': 5.1.4(rollup@4.28.0)
@@ -6813,6 +6818,8 @@ snapshots:
     dependencies:
       ansi-styles: 6.2.1
       is-fullwidth-code-point: 4.0.0
+
+  smol-toml@1.3.1: {}
 
   source-map-js@1.2.1: {}
 
