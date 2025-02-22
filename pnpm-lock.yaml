@@ -15,8 +15,8 @@ importers:
         specifier: 0.18.0
         version: 0.18.0(astro@5.3.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))(sharp@0.33.5)
       '@astrojs/tailwind':
-        specifier: 5.1.5
-        version: 5.1.5(astro@5.3.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))(tailwindcss@3.4.17)
+        specifier: 6.0.0
+        version: 6.0.0(astro@5.3.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))(tailwindcss@3.4.17)
       astro:
         specifier: 5.3.0
         version: 5.3.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1)
@@ -105,8 +105,8 @@ packages:
     resolution: {integrity: sha512-GilTHKGCW6HMq7y3BUv9Ac7GMe/MO9gi9GW62GzKtth0SwukCu/qp2wLiGpEujhY+VVhaG9v7kv/5vFzvf4NYw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
 
-  '@astrojs/tailwind@5.1.5':
-    resolution: {integrity: sha512-1diguZEau7FZ9vIjzE4BwavGdhD3+JkdS8zmibl1ene+EHgIU5hI0NMgRYG3yea+Niaf7cyMwjeWeLvzq/maxg==}
+  '@astrojs/tailwind@6.0.0':
+    resolution: {integrity: sha512-GbEK2/h0nvY8i6g1GZT5ddHAgj71lQIf34/j7+jPLhUti3xDxKcWElApDe2jWvqAaKl2oKEh045ITSm8mU9BVQ==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0 || ^5.0.0
       tailwindcss: ^3.0.24
@@ -3741,12 +3741,12 @@ snapshots:
     dependencies:
       prismjs: 1.29.0
 
-  '@astrojs/tailwind@5.1.5(astro@5.3.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@6.0.0(astro@5.3.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))(tailwindcss@3.4.17)':
     dependencies:
       astro: 5.3.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1)
-      autoprefixer: 10.4.20(postcss@8.5.1)
-      postcss: 8.5.1
-      postcss-load-config: 4.0.2(postcss@8.5.1)
+      autoprefixer: 10.4.20(postcss@8.5.3)
+      postcss: 8.5.3
+      postcss-load-config: 4.0.2(postcss@8.5.3)
       tailwindcss: 3.4.17
     transitivePeerDependencies:
       - ts-node
@@ -4742,14 +4742,14 @@ snapshots:
       stubborn-fs: 1.2.5
       when-exit: 2.1.3
 
-  autoprefixer@10.4.20(postcss@8.5.1):
+  autoprefixer@10.4.20(postcss@8.5.3):
     dependencies:
       browserslist: 4.24.2
       caniuse-lite: 1.0.30001686
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.1.1
-      postcss: 8.5.1
+      postcss: 8.5.3
       postcss-value-parser: 4.2.0
 
   available-typed-arrays@1.0.5: {}
@@ -6535,12 +6535,12 @@ snapshots:
     optionalDependencies:
       postcss: 8.4.49
 
-  postcss-load-config@4.0.2(postcss@8.5.1):
+  postcss-load-config@4.0.2(postcss@8.5.3):
     dependencies:
       lilconfig: 3.1.3
       yaml: 2.6.1
     optionalDependencies:
-      postcss: 8.5.1
+      postcss: 8.5.3
 
   postcss-nested@6.2.0(postcss@8.4.49):
     dependencies:
