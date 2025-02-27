@@ -13,13 +13,13 @@ importers:
         version: 0.9.4(typescript@5.7.3)
       '@astrojs/image':
         specifier: 0.18.0
-        version: 0.18.0(astro@5.3.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))(sharp@0.33.5)
+        version: 0.18.0(astro@5.3.1(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))(sharp@0.33.5)
       '@astrojs/tailwind':
         specifier: 5.1.5
-        version: 5.1.5(astro@5.3.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))(tailwindcss@3.4.17)
+        version: 5.1.5(astro@5.3.1(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))(tailwindcss@3.4.17)
       astro:
-        specifier: 5.3.0
-        version: 5.3.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1)
+        specifier: 5.3.1
+        version: 5.3.1(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1)
       tailwindcss:
         specifier: 3.4.17
         version: 3.4.17
@@ -1169,8 +1169,8 @@ packages:
     resolution: {integrity: sha512-Izi8RQcffqCeNVgFigKli1ssklIbpHnCYc6AknXGYoB6grJqyeby7jv12JUQgmTAnIDnbck1uxksT4dzN3PWBA==}
     engines: {node: '>=12'}
 
-  astro@5.3.0:
-    resolution: {integrity: sha512-e88l/Yk/6enR/ZDddLbqtM+oblBFk5mneNSmNesyVYGL/6Dj4UA67GPAZOk79VxT5dbLlclZSyyw/wlxN1aj3A==}
+  astro@5.3.1:
+    resolution: {integrity: sha512-dfcuWKkGsYI6XH6zhSK4tHGFXRgEbPZZwZQ/VmGtKBnDfFW+3faq6k+ETKlKDeRB4LwDGtaeoH+US4HYC5w1SA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1621,6 +1621,14 @@ packages:
 
   fastq@1.15.0:
     resolution: {integrity: sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw==}
+
+  fdir@6.4.3:
+    resolution: {integrity: sha512-PMXmW2y1hDDfTSRc9gaXIuCCRpuoz3Kaz8cUelp3smouvfT632ozg2vrT6lJsHKKOF59YLbOGfAWGUcKEfRMQw==}
+    peerDependencies:
+      picomatch: ^3 || ^4
+    peerDependenciesMeta:
+      picomatch:
+        optional: true
 
   figures@5.0.0:
     resolution: {integrity: sha512-ej8ksPF4x6e5wvK9yevct0UCXh8TTFlWGVLlgjZuoBH1HwjIfKE/IdL5mq89sFA7zELi1VhKpmtDnrs7zWyeyg==}
@@ -3068,6 +3076,10 @@ packages:
   tinyexec@0.3.2:
     resolution: {integrity: sha512-KQQR9yN7R5+OSwaK0XQoj22pwHoTlgYqmUscPYoknOoWCWfj/5/ABTMRi69FrKU5ffPVh5QcFikpWJI/P1ocHA==}
 
+  tinyglobby@0.2.12:
+    resolution: {integrity: sha512-qkf4trmKSIiMTs/E63cxH+ojC2unam7rJ0WrauAzpT3ECNTxGRMlaXxVbfxMUC/w0LaYk6jQ4y/nGR9uBO3tww==}
+    engines: {node: '>=12.0.0'}
+
   tinypool@1.0.2:
     resolution: {integrity: sha512-al6n+QEANGFOMf/dmUMsuS5/r9B06uwlyNjZZql/zv8J7ybHCgoihBNORZCY2mzUuAnomQa2JdhyHKzZxPCrFA==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -3675,10 +3687,10 @@ snapshots:
 
   '@astrojs/compiler@2.10.3': {}
 
-  '@astrojs/image@0.18.0(astro@5.3.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))(sharp@0.33.5)':
+  '@astrojs/image@0.18.0(astro@5.3.1(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))(sharp@0.33.5)':
     dependencies:
       '@altano/tiny-async-pool': 1.0.3
-      astro: 5.3.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1)
+      astro: 5.3.1(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1)
       http-cache-semantics: 4.1.1
       image-size: 1.1.1
       kleur: 4.1.5
@@ -3741,9 +3753,9 @@ snapshots:
     dependencies:
       prismjs: 1.29.0
 
-  '@astrojs/tailwind@5.1.5(astro@5.3.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@5.1.5(astro@5.3.1(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))(tailwindcss@3.4.17)':
     dependencies:
-      astro: 5.3.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1)
+      astro: 5.3.1(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1)
       autoprefixer: 10.4.20(postcss@8.5.1)
       postcss: 8.5.1
       postcss-load-config: 4.0.2(postcss@8.5.1)
@@ -4640,7 +4652,7 @@ snapshots:
 
   assertion-error@2.0.1: {}
 
-  astro@5.3.0(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1):
+  astro@5.3.1(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.5.1
@@ -4667,7 +4679,6 @@ snapshots:
       es-module-lexer: 1.6.0
       esbuild: 0.24.2
       estree-walker: 3.0.3
-      fast-glob: 3.3.3
       flattie: 1.1.1
       github-slugger: 2.0.0
       html-escaper: 3.0.3
@@ -4676,17 +4687,18 @@ snapshots:
       kleur: 4.1.5
       magic-string: 0.30.17
       magicast: 0.3.5
-      micromatch: 4.0.8
       mrmime: 2.0.0
       neotraverse: 0.6.18
       p-limit: 6.2.0
       p-queue: 8.1.0
+      picomatch: 4.0.2
       preferred-pm: 4.1.1
       prompts: 2.4.2
       rehype: 13.0.2
       semver: 7.7.1
       shiki: 1.29.2
       tinyexec: 0.3.2
+      tinyglobby: 0.2.12
       tsconfck: 3.1.4(typescript@5.7.3)
       ultrahtml: 1.5.3
       unist-util-visit: 5.0.0
@@ -5233,6 +5245,10 @@ snapshots:
   fastq@1.15.0:
     dependencies:
       reusify: 1.0.4
+
+  fdir@6.4.3(picomatch@4.0.2):
+    optionalDependencies:
+      picomatch: 4.0.2
 
   figures@5.0.0:
     dependencies:
@@ -7156,6 +7172,11 @@ snapshots:
   tinybench@2.9.0: {}
 
   tinyexec@0.3.2: {}
+
+  tinyglobby@0.2.12:
+    dependencies:
+      fdir: 6.4.3(picomatch@4.0.2)
+      picomatch: 4.0.2
 
   tinypool@1.0.2: {}
 
