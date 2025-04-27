@@ -49,8 +49,8 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
       vite:
-        specifier: 6.3.2
-        version: 6.3.2(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1)
+        specifier: 6.3.3
+        version: 6.3.3(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1)
       vitest:
         specifier: 2.1.9
         version: 2.1.9(@types/node@22.10.1)
@@ -1673,6 +1673,14 @@ packages:
       picomatch:
         optional: true
 
+  fdir@6.4.4:
+    resolution: {integrity: sha512-1NZP+GK4GfuAv3PqKvxQRDMjdSRZjnkq7KfhlNrCNNlZ0ygQFpebfrnfnq/W7fpUnAv9aGWmY1zKx7FYL3gwhg==}
+    peerDependencies:
+      picomatch: ^3 || ^4
+    peerDependenciesMeta:
+      picomatch:
+        optional: true
+
   figures@5.0.0:
     resolution: {integrity: sha512-ej8ksPF4x6e5wvK9yevct0UCXh8TTFlWGVLlgjZuoBH1HwjIfKE/IdL5mq89sFA7zELi1VhKpmtDnrs7zWyeyg==}
     engines: {node: '>=14'}
@@ -3112,6 +3120,10 @@ packages:
     resolution: {integrity: sha512-qkf4trmKSIiMTs/E63cxH+ojC2unam7rJ0WrauAzpT3ECNTxGRMlaXxVbfxMUC/w0LaYk6jQ4y/nGR9uBO3tww==}
     engines: {node: '>=12.0.0'}
 
+  tinyglobby@0.2.13:
+    resolution: {integrity: sha512-mEwzpUgrLySlveBwEVDMKk5B57bhLPYovRfPAXD5gA/98Opn0rCDj3GtLwFvCvH5RK9uPCExUROW5NjDwvqkxw==}
+    engines: {node: '>=12.0.0'}
+
   tinypool@1.0.2:
     resolution: {integrity: sha512-al6n+QEANGFOMf/dmUMsuS5/r9B06uwlyNjZZql/zv8J7ybHCgoihBNORZCY2mzUuAnomQa2JdhyHKzZxPCrFA==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -3404,8 +3416,8 @@ packages:
       terser:
         optional: true
 
-  vite@6.3.2:
-    resolution: {integrity: sha512-ZSvGOXKGceizRQIZSz7TGJ0pS3QLlVY/9hwxVh17W3re67je1RKYzFHivZ/t0tubU78Vkyb9WnHPENSBCzbckg==}
+  vite@6.3.3:
+    resolution: {integrity: sha512-5nXH+QsELbFKhsEfWLkHrvgRpTdGJzqOZ+utSdmPTvwHmvU6ITTm3xx+mRusihkcI8GeC7lCDyn3kDtiki9scw==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -4767,8 +4779,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.15.0
       vfile: 6.0.3
-      vite: 6.3.2(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1)
-      vitefu: 1.0.6(vite@6.3.2(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1))
+      vite: 6.3.3(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1)
+      vitefu: 1.0.6(vite@6.3.3(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.1
@@ -5335,6 +5347,10 @@ snapshots:
       reusify: 1.0.4
 
   fdir@6.4.3(picomatch@4.0.2):
+    optionalDependencies:
+      picomatch: 4.0.2
+
+  fdir@6.4.4(picomatch@4.0.2):
     optionalDependencies:
       picomatch: 4.0.2
 
@@ -7252,6 +7268,11 @@ snapshots:
       fdir: 6.4.3(picomatch@4.0.2)
       picomatch: 4.0.2
 
+  tinyglobby@0.2.13:
+    dependencies:
+      fdir: 6.4.4(picomatch@4.0.2)
+      picomatch: 4.0.2
+
   tinypool@1.0.2: {}
 
   tinyrainbow@1.2.0: {}
@@ -7527,23 +7548,23 @@ snapshots:
       '@types/node': 22.10.1
       fsevents: 2.3.3
 
-  vite@6.3.2(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1):
+  vite@6.3.3(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1):
     dependencies:
       esbuild: 0.25.0
-      fdir: 6.4.3(picomatch@4.0.2)
+      fdir: 6.4.4(picomatch@4.0.2)
       picomatch: 4.0.2
       postcss: 8.5.3
       rollup: 4.40.0
-      tinyglobby: 0.2.12
+      tinyglobby: 0.2.13
     optionalDependencies:
       '@types/node': 22.10.1
       fsevents: 2.3.3
       jiti: 1.21.6
       yaml: 2.6.1
 
-  vitefu@1.0.6(vite@6.3.2(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1)):
+  vitefu@1.0.6(vite@6.3.3(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1)):
     optionalDependencies:
-      vite: 6.3.2(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1)
+      vite: 6.3.3(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1)
 
   vitest@2.1.9(@types/node@22.10.1):
     dependencies:
