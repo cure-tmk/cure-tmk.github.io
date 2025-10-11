@@ -22,7 +22,7 @@
 		"@astrojs/check": "0.9.4",
 		"@astrojs/image": "0.18.0",
 		"@astrojs/tailwind": "5.1.5",
-		"astro": "5.13.5",
+		"astro": "5.14.3",
 		"tailwindcss": "3.4.17"
 	},
 	"devDependencies": {
