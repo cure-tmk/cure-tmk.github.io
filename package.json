@@ -19,7 +19,7 @@
 		"scaffold": "scaffdog generate -f"
 	},
 	"dependencies": {
-		"@astrojs/check": "0.9.4",
+		"@astrojs/check": "0.9.5",
 		"@astrojs/image": "0.18.0",
 		"@astrojs/tailwind": "5.1.5",
 		"astro": "5.15.9",
