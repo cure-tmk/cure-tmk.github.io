@@ -35,7 +35,7 @@
 		"scaffdog": "4.1.0",
 		"typescript": "5.9.3",
 		"vite": "6.4.1",
-		"vitest": "2.1.9"
+		"vitest": "4.0.18"
 	},
 	"packageManager": "pnpm@9.15.9",
 	"engines": {
