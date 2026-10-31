@@ -49,8 +49,8 @@ importers:
         specifier: 5.9.3
         version: 5.9.3
       vite:
-        specifier: 6.4.3
-        version: 6.4.3(@types/node@22.10.1)(jiti@1.21.7)(yaml@2.8.3)
+        specifier: 6.4.4
+        version: 6.4.4(@types/node@22.10.1)(jiti@1.21.7)(yaml@2.8.3)
       vitest:
         specifier: 2.1.9
         version: 2.1.9(@types/node@22.10.1)
@@ -3580,8 +3580,8 @@ packages:
       terser:
         optional: true
 
-  vite@6.4.3:
-    resolution: {integrity: sha512-NTKlcQjlAK7MlQoyb6LgaqHc8sso/pVyUJYWMws3jg21uTJw/LddqIFPcPqP6PzpgbIcZyKI85sFE4HBrQDA8A==}
+  vite@6.4.4:
+    resolution: {integrity: sha512-xGjU/SyjeNyb0E4KxXBvYz/1C+3JXuujvf2hXNOtnlcE+58o5ajd9N2/n2VhkiJvpCP2qQasnUpx5PXNeI+p1Q==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -4995,8 +4995,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.17.4
       vfile: 6.0.3
-      vite: 6.4.3(@types/node@22.10.1)(jiti@1.21.7)(yaml@2.8.3)
-      vitefu: 1.1.1(vite@6.4.3(@types/node@22.10.1)(jiti@1.21.7)(yaml@2.8.3))
+      vite: 6.4.4(@types/node@22.10.1)(jiti@1.21.7)(yaml@2.8.3)
+      vitefu: 1.1.1(vite@6.4.4(@types/node@22.10.1)(jiti@1.21.7)(yaml@2.8.3))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.3
@@ -7802,7 +7802,7 @@ snapshots:
       '@types/node': 22.10.1
       fsevents: 2.3.3
 
-  vite@6.4.3(@types/node@22.10.1)(jiti@1.21.7)(yaml@2.8.3):
+  vite@6.4.4(@types/node@22.10.1)(jiti@1.21.7)(yaml@2.8.3):
     dependencies:
       esbuild: 0.25.0
       fdir: 6.5.0(picomatch@4.0.4)
@@ -7816,9 +7816,9 @@ snapshots:
       jiti: 1.21.7
       yaml: 2.8.3
 
-  vitefu@1.1.1(vite@6.4.3(@types/node@22.10.1)(jiti@1.21.7)(yaml@2.8.3)):
+  vitefu@1.1.1(vite@6.4.4(@types/node@22.10.1)(jiti@1.21.7)(yaml@2.8.3)):
     optionalDependencies:
-      vite: 6.4.3(@types/node@22.10.1)(jiti@1.21.7)(yaml@2.8.3)
+      vite: 6.4.4(@types/node@22.10.1)(jiti@1.21.7)(yaml@2.8.3)
 
   vitest@2.1.9(@types/node@22.10.1):
     dependencies:
